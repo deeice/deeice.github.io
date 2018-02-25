@@ -1,0 +1,422 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Mozilla/4.75 (Macintosh; U; PPC) [Netscape]">
+<title>Notes about LdGLite (Mac)</title>
+</head>
+<body>
+
+<center>
+<h1 style="text-align:center">
+Notes about <B>LdGLite</B> (<B>Mac</B>)</h1></center>
+
+<h2>Introduction</h2>
+<B>LdGLite</B> (<B>Mac</B>) is an LDRAW viewer and editor for Macintosh users with MacOS
+8.6 &shy;9.2. To run <B>LdGLite</B> you will also need to LDRAW files from <a href="http://www.ldraw.org/">www.ldraw.org</a>,
+listed for the <B>Mac</B>, so get these if you haven’t yet got them.
+<h2>Quick Start</h2>
+First create your LDRAW directory containing the MODELS, PARTS and P sub-directories.
+(Personally I placed my copy of the LDRAW directory in the same place as
+the <B>LdGLite</B> program)
+<p>Start <B>LdGLite</B> by double clicking on it. The first time you run <B>LdGLite</B>
+you will be asked to identify the LDRAW subdirectory, when you have highlighted
+the directory, press the select button on the “Open dialog box” (see below).
+<br>
+<center>
+<p><img SRC="select.gif" ALT="Select LDRAW folder" BORDER=0 height=208 width=357></center>
+<p>Once the LDRAW subdirectory has been identified, then the program will
+prompt you to select and LDRAW file (normally ends with .dat). Select the
+LDRAW data file and the screen will then display the model you have selected.</p>
+<h2>Basic Controls</h2>
+<center><p><img SRC="screen.gif" ALT="Example of a LdGLite (Mac) screen" BORDER=0 height=480 width=640>
+<br><u><B>Mac</B> Screen in edit mode of an LDRAW model</u></center>
+<p>(Note the program is in MacGLUT, which supplied the layout &shy; and
+it is very un-<B>Mac</B> like)</p>
+<p>There are only 3 menus ‘Apple’, File and RightButton (see above), ‘Help’
+is a standard button and not implemented</p>
+<p>The about in ‘<b>Apple</b>’ will tell you about the GLUT implementation
+<br>The <b>File</b> Menu is restricted to Quit
+<br>The <b>RightButton</b> menu (also accessible as a contextual menu ‘Cntrl
++ click’) has all of the controls. The main menu consists of: File, View,
+Options, Background Colour, Bitmap, Help and Quit.</p>
+<p>File:
+<blockquote>Open &shy; Displays <B>Mac</B> “Open File” dialog box
+<br>Save As &shy; Displays <B>Mac</B> “Save as” dialog box
+<br>Editor &shy; Enter or leave Edit Mode for the Program</blockquote>
+View:
+<blockquote>Lists a variety of view options for the Lego model</blockquote>
+Options:
+<blockquote>Orthographic &shy; Displays the model without perspective distortion
+<br>Perspective &shy; Displays perspective in the model, only works in
+wireframe mode
+<br>Shading &shy; Adds shadow effects to the model
+<br>Line Mode &shy; Toggles between a wireframe model and a solid view
+<br>Normal &shy; Reverts the display to solid view
+<br>Studs &shy; Draws the model without connection studs (faster rendering)
+<br>Visible Spin &shy; Should rotate the model &shy; Doesn’t work yet
+<br>Step-Continuos &shy; Rendering of the model doesn’t wait for user input
+<br>Parser &shy; Toggles between the L3parser and the LDLite parser
+<br>Zoom In &shy; Get closer to the model
+<br>Zoom Out &shy; Go away from the model
+<br>Scale up &shy; Make the model bigger
+<br>Scale down &shy; Make the model smaller</blockquote>
+Background Colour:
+<blockquote>Change the background colour</blockquote>
+Bitmap:
+<blockquote>Saves the current model as a Bitmap Image</blockquote>
+Help:
+<blockquote>Tells current version number</blockquote>
+Quit:
+<blockquote>Quit</blockquote>
+<p>Most of the controls have key equivalents.
+<h2>History</h2>
+<p>This program is a Lego Cad program for the Macintosh. It is derived
+from <B>LdGLite</B>, which is in turn a platform independent version of LdLite
+(yes that was a tongue twister &shy; but it gets easier). <B>LdGLite</B> achieves
+platform independency by using the OpenGL graphics interface and the GLUT
+toolkit (techo stuff).
+<p>LdLite is an LDRAW file viewer for Windows. You can use it to view DAT
+and MPD files containing models made with everyone's favourite construction
+bricks.
+<p>LDRAW is a text only CAD program for DOS operation under Windows (now
+all of the history has been revealed).
+<p><B>LdGLite</B> currently runs in Windows, Linux, and MacOS. <B>LdGLite</B> does not
+yet provide all of the functionality of LdLite. However it does have a
+few small goodies not yet available in LdLite.
+<p>Unfortunately <B>LdGLite</B> doesn’t compile easily for the MacOS and the resulting
+program is very un-<B>Mac</B> like in its operation (but it does work). Therefore
+<B>LdGLite</B> (<B>Mac</B>) is an attempt to create a user-friendlier version of <B>LdGLite</B>
+that will run under MacOS 8.6 &shy; 9.2 (So far I have had very little
+success with the user friendly part).
+<p>For MacOS X users there is a compiled version of <B>LdGLite</B> on the <B>LdGLite</B>
+website. However, as yet I haven’t attempted to “carbonise” this source
+to make this program MacOS X compatible &shy; I firstly need to update
+the (Open / Close dialog boxes as a minimum).
+<p>To get from <B>LdGLite</B> to <B>LdGLite</B> (<B>Mac</B>), I have utilised <B>LdGLite</B> source
+code where necessary and it remains about 90% original. I have then supplied
+routines to interface more cleanly with the MacOS. So things such as the
+<B>Mac</B> dialog boxes for opening and saving files work, an ability to access
+the editor is available, Apple events are intercepted and actioned etc.
+<p>In conclusion, I must acknowledge (he / she doesn’t supply a name) for
+writing <B>LdGLite</B> (found at <a href="http://ldglite.sourceforge.net">http://<B>ldglite</B>.sourceforge.net</a>)
+without whom there would be no program at all. Secondly I’m also indebted
+to Erik Olson who converted <B>LdGLite</B> 0.5 to the original macLDG program.
+Without Eric I wouldn’t have attempted converting this version of <B>LdGLite</B>.
+<h2>
+System Requirements</h2>
+<B>LdGLite</B> (<B>Mac</B>) should run on any Macintosh with OpenGL installed and an
+ATI graphics system. All iMacs, G3 towers, iBooks, G3 Powerbooks and G4’s
+are fitted with ATI graphics systems. Additionally, most <B>Mac</B>’s produced
+since about 1998 feature ATI graphics. Run the “System Profiler” under
+the “Apple” menu. Select devices and volumes and look at the graphics system
+to see if you have an ATI graphics system.
+<p>ATI graphics are necessary as the GLUT toolbox is not compatible with
+other graphics systems. Secondly MacOS 8.6 or higher is needed to run GLUT.
+<p>Additionally to run <B>LdGLite</B> (<B>Mac</B>) you will need LDRAW installed in a
+folder on your hard disk. LDRAW is available from www.ldraw.org along with
+installation instructions.
+<p><b>Setting up your System to run <B>LdGLite</B> (<B>Mac</B>)</b>
+<p>Before running <B>LdGLite</B> (<B>Mac</B>) you will require that the LDRAW subdirectory
+is present on your hard-disk and complete with the following:
+<p>Subdirectory &shy; LDRAW
+<p>Within LDRAW there must be these 3 Subdirectories; PARTS, MODELS and
+P. (these directories contain the Lego parts database and primitives for
+drawing them).
+<p>Note it is vital that the spelling and capitalisation for the sub directories
+are exactly as above, as Parts is not equal to PARTS.
+<p>When you run <B>LdGLite</B> (<B>Mac</B>) for the first time, you will be asked to
+find the LDRAW subdirectory. Highlight your LDRAW subdirectory and press
+the button marked “Select LRDAW”.
+<p>This step will then allow <B>LdGLite</B> (<B>Mac</B>) to remember where the subdirectory
+is. (if you get this wrong, go to the preferences folder in the System
+folder, find the file called “<B>LdGLite</B> Prefs” and drag this file into the
+trash (ie delete it). Then next time you run <B>LdGLite</B> (<B>Mac</B>) it will re-ask
+you to identify the LDRAW sub directory.
+<h2>
+Key Commands</h2>
+Basic;
+<p>0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ldraw Oblique View
+<p>1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Back View
+<p>2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Left View
+<p>3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Right View
+<p>4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Top View
+<p>5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Underneath View
+<p>6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Oblique View
+<p>7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Front View
+<p>8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Upside down view
+<p>9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Natural View
+<p>j&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ldraw_projection_type =
+0
+<p>J&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ldraw_projection_type =
+1
+<p>f&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Studless Mode
+<p>n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; No Polygons, Shaded Mode
+<p>h&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; No Polygons, Shaded Mode
+<p>l&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; No Polygons, Shaded Mode
+<p>b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Create Bitmap (use Cntrl-b
+for 24 bit BMP)
+<p>B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Create Bitmap (use Cntrl-B
+for Alpha transparency)
+<p>s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pause / Continuos model
+displaying
+<p>g&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ldraw_commandline_ops.poll
+^= 1
+<p>r&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Toggle L3Parser and LDLite
+Parser
+<p>q, Q&nbsp;&nbsp;&nbsp; toggles line quality (anti-aliased)
+<p>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; toggles visible spin mode.
+<p>Esc&nbsp;&nbsp;&nbsp;&nbsp; quits.
+<h2>
+Edit Mode</h2>
+To enter the edit mode, either select it from the Menu or press the “Insert”
+key. (Most Macs don’t have an Insert Key). Once the insert key has been
+pressed, the screen will change to reveal 4 lines of text at the top.
+<p>At this point a complete LEdit simulator will be operating. (LEdit is
+a component of LDRAW). See the instructions for LEdit for a more complete
+guide to LEdit. As with LEdit, there is no mouse support available for
+manipulating the pieces at this stage. Additionally the shortcuts referred
+to in LEdit (eg /V to alter the view mode) don’t function as they refer
+to “Command line info operations” which is an ancient MS Dos feature not
+available with the <B>Mac</B>.
+<p>A summary of the commands for LEdit are;
+<p>+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Increase magnification or zoom
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Decrease magnification or zoom
+<p>PgUp&nbsp;&nbsp;&nbsp; Increment to the previous piece
+<p>PgDn&nbsp;&nbsp;&nbsp; Decrement to the next piece
+<p>A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rotate
+current piece 90 degrees clockwise (as seen above)
+<p>C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Prompt
+to change colour then enter a colour number
+<blockquote>0 = Black
+<br>1 = Blue
+<br>2 = Green
+<br>3 = Dark Cyan
+<br>4 = Red
+<br>5 = Magenta
+<br>6 = Brown
+<br>7 = Grey
+<br>8 = Dark Grey
+<br>9 = Light Blue
+<br>10 = Light Green
+<br>11 = Cyan
+<br>12 = Light Red
+<br>13 = Pink
+<br>14 = Yellow
+<br>15 = White
+<br>16 = Null &shy; Colour
+<p>For transparent colours, add 32 to the above numbers (eg red = 32 +
+4 = 36)
+<p>NB Once a colour is set all new pieces will be that colour until it
+is changed</blockquote>
+E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Redraws
+the screen
+<p>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Inserts a New Piece directly after the current one
+
+<p class="MsoBodyTextIndent">M&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Move setting adjustment (cycles through the setting) The current setting
+is shown at the top of the screen
+<blockquote>Fine = 1/20 of a stud sideways or 1/8 of a plate thickness
+up
+<br>Normal = 1/2 of a stud sideways or 1 plate thickness up
+<br>Coarse = 5 studs sideways or 10 plate thicknesses up</blockquote>
+P&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Prompt for Piece
+Number. Changes the current piece to the one specified
+<blockquote>Eg 3001 = 2x4 brick, 3002 = 2x3 brick, 3003=2x2 brick etc.
+<br>Getting brick id’s is problematic at this stage.</blockquote>
+W&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Swap the current and
+next pieces (not working).
+<p>X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gets prompt
+to move the current piece in the X direction. Enter the number of LDRAW
+units you wish to move the piece.
+<p>Y&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gets prompt
+to move the current piece in the Y direction. Enter the number of LDRAW
+units you wish to move the piece.
+<p>Z&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gets prompt
+to move the current piece in the Z direction. Enter the number of LDRAW
+units you wish to move the piece.
+<p>ESC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Brings up the LEdit Menus.
+<p><b>LEdit Menus</b>
+<p>Pressing ESC reveals the LEdit menus, as follows;
+<blockquote>File
+<br>Edit
+<br>View
+<br>Turn
+<br>Piece
+<br>Options
+<br>Quit</blockquote>
+File Menu
+<blockquote>Load &shy; Loads a new drawing (better to use Open with the
+mouse)
+<br>Save - Saves the current model in the current directory (better to
+Save using the pull down directory with the mouse)
+<br>Exit &shy; Quits the program</blockquote>
+Edit Menu
+<blockquote>Insert &shy; Same as ‘I’ above
+<br>Delete &shy; Deletes the current piece
+<br>Swap &shy; Same as ‘W’ above
+<br>Line-Type
+<br>Changes the current line type to
+<br>Piece &shy; Default for drawing pieces
+<br>Comment &shy; 3 Possibilities (must be in capital letters)
+<br>Step &shy; (Capital letters) Causes display to stop until the mouse
+is pressed</blockquote>
+View Menu
+<br>&nbsp;
+<h2>
+Format of LDraw data</h2>
+
+<center><img SRC="detail.gif" ALT="Detail of Edit Menu" BORDER=2 height=159 width=327>
+<br><u>Option menu showing with view of piece data</u></center>
+
+<p>A typical LDraw file line is as below;
+<p>1 7 0.0 &shy;32.0 &shy;90.0 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0 3938.dat
+<p>1 Line Type (1) for pieces, (0) for Steps or Comments
+<br>7 Colour &shy; 7 = Grey
+<br>0.0 Piece X Coordinate
+<br>-32.0 Piece Y Coordinate
+<br>-90.0 Piece Z Coordinate
+<br>1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0 Part orientation
+<br>3938.dat Piece number &shy; 3938 = Hinge 1 x 2 Top
+<h2>
+Extra Stuff (Taken Directly from the <B>LdGLite</B> Readme file)</h2>
+Command line options (see also the original ldlite docs for more):
+<p>-fh turns on shading mode.
+<br>-fs turns off stud drawing. (l3glite only)
+<br>-fsl draws studs as lines. (l3glite only)
+<br>-fe turns off edge lines
+<br>-fr same as -fe (Render mode? Rough draft? I don't know what R stands
+for.)
+<br>-ffT,E,S,R,G,B turns on fogging
+<br>T = fogging type (1 = linear, 2 = exp2, 3 = exp3)
+<br>E,S = end/far, start/near fog clip planes in linear mode.
+<br>E,S = fog density, S= ignored param in exp mode.
+<br>R,G,B = fog color (default = fade to white, try 0,0,0 for night scene)
+<br>All fog params except T are optional.
+<br>Try these: -ff3,0.0004 -ff3,0.0003,0,0.8,0.8,1.0
+<br>-v0 displays in a 320x200 window.
+<br>-v-1 displays in fullscreen with no decorations.
+<br>-v-2 displays in fullscreen gamemode (no menus in gamemode).
+<br>-v7 displays in 1600x1024
+<br>-v8 displays in 1600x1200
+<br>-vX,Y displays in an X wide by Y high window.
+<br>-x displays the x,y,z axis.
+<br>-ms Saves an image for each STEP and quits.
+<br>-mS Does the same, but without opening a window.
+<br>-iN picks output image type. 1 = PNG, 2 = Transparent PNG, 3 = BMP8,
+4 = BMP24
+<br>5 = PPM. Use -N to turn off output image cropping.
+<br>-eN.NN fixes polyline offset driver errors. Try -e0.95 if lines look
+bad.
+<br>-p turns on polling mode.
+<br>-ld forces the program to use the ldlite parser.
+<br>-l3 forces the program to use the l3 parser.
+<br>-le starts the program in LEDIT emulation mode.
+<br>-lE starts the program in LEDIT emulation mode with solid moving pieces.
+<br>-ledit or -LEDIT do the same but with draw-to-current and stud-as-line
+on.
+<br>-wN sets linewidth to N.
+<br>-q quality lines (antialiased)
+<br>-J picks the perspective projection.
+<br>-zN sets the near clipping plane. (default = 10. 100 if GL_DEPTH_BITS
+&lt; 24)
+<br>-ZN sets the far clipping plane. (default = 4000)
+<br>-caN sets the camera FOV angle in degrees. (like l3p, except default
+= 45)
+<br>-ccX,Y,Z sets the camera location. (like l3p, except default = 0,0,1000)
+<br>-coX,Y,Z sets the model origin for the camera to look at. (default
+= 0,0,0)
+<br>-cuX,Y,Z sets the camera up vector. (default = 0,0,1)
+<br>-lcX,Y,Z sets the light location. (like l3p, except default = -1000,1000,1000)
+<br>-lcX,Y,Z,R,G,B sets the light location and color.
+<br>-lCR,G,B sets the ambient lighting color.
+<br>-uX,Y saves a huge output image from window sized tiles. (see notes
+below)
+<br>-&amp; windows mode. Detach from the console window. Windows version
+only.
+<br>-- if no DAT filename is given on the command line <B>ldglite</B> will read
+<p>from stdin. (l3glite does not do this) Try this:
+<p>cat file.dat | <B>ldglite</B> -v3 -ms --
+<p>Kinda neat, but I don't know if this is good for much. Perhaps if you
+have an application that generates dat files you can pipe the output through
+<B>ldglite</B> and produce an image file. For example ldrawmode for&nbsp; emacs
+could possibly be extended to use this to send a dat file in the buffer
+out to the printer. (especially if I add postscript output)
+<p>F10 enters fullscreen gamemode. (May be faster on some video cards)
+<br>F9 exits fullscreen gamemode.
+<br>Right Mouse button displays the popup menu.
+<br>Left Mouse Drag will rotate the model.
+<br>Shift Mouse Drag rotates the model in solid bounding box mode.
+<br>Ctrl Mouse Drag rotates the model in solid studless mode.
+<br>Arrow keys turn the viewpoint camera 5 degrees left, right, up, down.
+<br>Alt Arrow keys roll the camera left, right, up, down.
+<br>Ctrl Arrow keys move the camera left, right, up, down.
+<br>PGUP and PGDN move the camera in and out (only visible in perspective
+mode)
+<br>0-9 keys pick one of the preset viewpoints.
+<br>+ scales the model up to double size. (ALT + zooms in 10%)
+<br>- shrinks the model by half. (ALT - zooms out 10%)
+<br>S attempts to scale the model to fit the window. Needs work though.
+<br>s toggles step/continuous mode
+<br>g toggles polling mode.
+<br>j picks the orthographic projection.
+<br>J picks the perspective projection.
+<br>r toggles the parser (LdLite or L3)
+<br>n turns on normal (no) shading.
+<br>h turns on shading.
+<br>l turns on line only wireframe mode.
+<br>f toggles stud drawing.
+<br>V toggles visible spin mode.
+<br>b prints a BMP file. (use CTRL-b for 24 bit BMP)
+<br>B prints a PNG file. (use CTRL-B for Alpha transparency)
+<br>q toggles line quality (antialiasing)
+<br>Esc quits.
+<p>INSERT key toggles LEDIT emulation mode.
+<br>(use CTRL-INSERT if you want to render the moving part solid)
+<p>An excellent description of the LEDIT Hot Keys can be found at:
+<p><a href="http://library.thinkquest.org/20551/keys.html">http://library.thinkquest.org/20551/keys.html</a>
+<p>LEDIT extensions
+<p>The LEDIT emulation currently contains an extension to the linetype
+menu to allow adding primitive linetypes 2-5. The parser for this ignores
+commas and parenthesis so you can enter the points for a type 2 line like
+this if you wish:
+<p>Enter Coords for Type 2 Primitive: (0.0, 0.0, 0.0) (10.0, 10.0, 10.0)
+<p>The color defaults to 16 for filled primitives and 24 for line primitives.
+<p>Also, in addition to the x, y, z keys to translate the piece along an
+axis, you can now use the v key to translate by an (x, y, z) vector.
+<p>The Piece menu now also contains:
+<br>an (x, y, z) location option
+<br>an (x, y, z) scale option (use negative numbers to mirror)
+<br>a matrix replacement option.
+<br>an part inliner option.
+<p>The Turn menu now also contains:
+<br>an (x, y, z) origin option to select an arbitrary turn center.
+<br>an option to toggle display of the three axis through the turn center.
+<br>a rotate option (uses the part origin instead of the turn center)
+<p>A Rotate menu has been added: Like the rotate option on the Turn menu.
+<h2>
+LEDIT emulation quirks</h2>
+Part lookup is not currently supported. Try the <a href="http://www.nightsolo.net/lego/index.html">
+printable parts catalog</a>.
+<p>Empty lines are discarded by the L3 parser. Use a blank comment instead.
+<p>Notes
+<p>Use -uX, Y on the command line to build and save an image larger than
+the screen made out of several tiles, each the size of the <B>ldglite</B> window.
+This can be used in combination with the -W option for wide lines and/or
+the -Q switch for antialiased lines to generate high quality instructions.
+Currently this dumps PPM files instead of BMP files. PNG works, but transparent
+backgrounds and cropping are not supported in tiled mode. <B>Ldglite</B> automatically
+exits after saving the images (much like the -MS mode). The following command
+renders the model in double size and saves a 2000 by 2000 PNG file. It
+uses the l3 parser so it only has to parse the mpd file once for the multiple
+rendering passes required for the tiles.
+<p><B>ldglite</B> -l3 -i2 -s2 -w2 -u2000,2000 model.mpd
+<br>-----------------------
+</body>
+</html>
+
+
+
